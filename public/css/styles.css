@@ -1,0 +1,1255 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    line-height: 1.6;
+    background-color: #1e1e1e;
+    color: #fff;
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content-portfo{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+/* Header */
+.welcome-atas {
+    text-align: center;
+    padding: 35px 0px;
+}
+.header {
+    background: linear-gradient(135deg, #1abc9c, #16a085);
+    color: #fff;
+    text-align: center;
+    padding: -20px -20px;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-top: 20px;
+    margin-bottom: -30px;
+    position: relative;
+    z-index: 1;
+}
+
+.header h1 a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.header p {
+    font-size: 1.2rem;
+    margin-top: 0px;
+}
+
+/* Glitch Effect */
+.glitch {
+    animation: glitch 2s infinite;
+}
+
+@keyframes glitch {
+    0% {
+        text-shadow: -2px 0 #ff00c1, 2px 0 #00fff6;
+    }
+    25% {
+        text-shadow: 2px 0 #ff00c1, -2px 0 #00fff6;
+    }
+    50% {
+        text-shadow: -2px 0 #ff00c1, 2px 0 #00fff6;
+    }
+    75% {
+        text-shadow: 2px 0 #ff00c1, -2px 0 #00fff6;
+    }
+    100% {
+        text-shadow: -2px 0 #ff00c1, 2px 0 #00fff6;
+    }
+}
+
+/* Navigation Menu */
+.navbar {
+    background: #2c3e50;
+    padding: 8px 0; /* Mengurangi padding agar navbar lebih ramping */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Mengurangi jarak antar menu */
+    padding: 0;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 5px 10px; /* Menambahkan padding agar lebih nyaman diklik */
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #16a085;
+}
+
+/* ============================== */
+/* 📌 NAVBAR - MENU AKTIF 📌 */
+/* ============================== */
+/* Menu yang aktif berubah warna */
+.navbar ul li a.active {
+    color: #1abc9c; /* Warna hijau sebagai penanda */
+    font-weight: bold;
+    border-bottom: 2px solid #1abc9c; /* Garis bawah untuk efek tambahan */
+}
+
+/* Efek hover tetap ada */
+.navbar ul li a:hover {
+    color: #16a085;
+}
+
+/* RESPONSIVE NAVBAR */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 5px 0; /* Padding lebih kecil di HP */
+    }
+
+    .navbar ul {
+        gap: 6px; /* Jarak antar menu lebih kecil */
+    }
+
+    .navbar ul li a {
+        font-size: 0.85rem; /* Ukuran font lebih kecil agar tetap muat */
+        padding: 3px 7px; /* Padding lebih kecil */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar ul {
+        gap: 5px;
+    }
+
+    .navbar ul li a {
+        font-size: 0.65rem; /* Ukuran font lebih kecil di HP sangat kecil */
+        padding: 2px 5px;
+    }
+}
+
+/* Welcome Section */
+.welcome {
+    text-align: center;
+    padding: 35px 0px;
+}
+
+.welcome h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.welcome p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Kategori Portofolio */
+
+.category-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.category-link {
+    text-decoration: none;
+    color: #16a085;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.category-link:hover {
+    color: #cdd9d7;
+}
+
+/* Tombol Portfolio */
+.welcome .btn {
+    background: #1abc9c;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.welcome .btn:hover {
+    background: #16a085;
+}
+
+/* Complex Blitz Effect */
+.blitz-text {
+    font-size: 1.2rem;
+    color: #1abc9c;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none; /* Menghilangkan garis bawah */
+    color: inherit; /* Menjaga warna teks tetap sesuai dengan elemen induk */
+    white-space: nowrap;
+    
+}
+
+.blitz-text::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-decoration: none; /* Menghilangkan garis bawah */
+    color: #ff00c1;
+    animation: glitch 5s infinite;
+    pointer-events: none;
+}
+
+@keyframes glitch {
+    0% {
+        transform: translateX(-2px);
+    }
+    25% {
+        transform: translateX(2px);
+    }
+    50% {
+        transform: translateX(-2px);
+    }
+    75% {
+        transform: translateX(2px);
+    }
+    100% {
+        transform: translateX(-2px);
+    }
+}
+
+/* =========================== */
+/* 📌 RESPONSIVE WELCOME SECTION 📌 */
+/* =========================== */
+@media (max-width: 768px) {
+    .welcome {
+        text-align: center;
+        padding: 30px 0px;
+    }
+    .welcome h2 {
+        font-size: 1.5rem; /* Lebih kecil di HP */
+    }
+
+    .welcome p {
+        font-size: 0.9rem; /* Ukuran teks lebih kecil */
+    }
+
+    .category-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+        text-align: center;
+    }
+
+    .category-container a {
+        font-size: 0.85rem; /* Kategori lebih kecil */
+        padding: 3px 7px;
+    }
+
+    .blitz-text {
+        font-size: 1rem;
+        text-align: center;
+        display: block;
+    }
+
+    .welcome .btn {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome {
+        text-align: center;
+        padding: 20px 0px;
+    }
+    .welcome h2 {
+        font-size: 1.3rem;
+    }
+
+    .welcome p {
+        font-size: 0.85rem;
+        margin-bottom: -10px;
+    }
+
+    .category-container a {
+        font-size: 0.65rem;
+        padding: 0px 0px;
+    }
+
+    .category-link a {
+        font-size: 0.75rem;
+        padding: 0px 0px;
+        
+    }
+
+    .blitz-text {
+        font-size: 0.75rem;
+        display: inline;
+    }
+
+    .welcome .btn {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+        
+    }
+}
+
+/* ============================== */
+/* 📌 FEATURED PROJECTS 📌 */
+/* ============================== */
+.featured-projects {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Tata letak default (desktop) - gambar di atas teks */
+.project {
+    display: flex;
+    flex-direction: column !important; /* Pastikan gambar di atas untuk desktop */
+    align-items: center;
+    gap: 15px;
+    background: #2c3e50;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Gambar */
+.project img {
+    width: 100%;
+    max-width: 300px; /* Batasi ukuran maksimum */
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Info */
+.project-info {
+    flex: 1;
+}
+
+.project-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.project-info .btn {
+    background: #1abc9c;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.project-info .btn:hover {
+    background: #16a085;
+}
+
+/* ============================== */
+/* 📌 RESPONSIVE DESIGN (HP) 📌 */
+/* ============================== */
+@media (max-width: 768px) {
+    .featured-projects {
+        padding: 10px 0;
+        text-align: center;
+    }
+    .project {
+        flex-direction: row !important; /* Pastikan gambar di kiri di HP */
+        text-align: left !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+    }
+
+    .project img {
+        width: 120px !important; /* Gambar lebih kecil di HP */
+        height: auto !important;
+        border-radius: 5px !important;
+        flex-shrink: 0 !important; /* Agar gambar tidak menyusut */
+    }
+
+    .project-info {
+        flex: 1 !important;
+    }
+
+    .project-info h3 {
+        font-size: 0.9rem !important;
+    }
+
+    .project-info p {
+        font-size: 0.75rem !important;
+    }
+
+    .project-info .btn {
+        font-size: 0.8rem !important;
+        padding: 8px 15px !important;
+    }
+}
+
+
+/* ============================== */
+/* 📌 KATEGORI (DEFAULT) 📌 */
+/* ============================== */
+.categories {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Default 4 kolom */
+    gap: 20px;
+}
+
+.category {
+    background: #2c3e50;
+    padding: 15px; /* Mengurangi padding */
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.category:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.category h3 {
+    font-size: 1.3rem; /* Mengecilkan ukuran font */
+    margin-bottom: 8px;
+}
+
+.category p {
+    font-size: 0.9rem; /* Teks lebih kecil */
+    margin-bottom: 15px;
+}
+
+.category .btn {
+    background: #1abc9c;
+    color: #fff;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.category .btn:hover {
+    background: #16a085;
+}
+
+/* ============================== */
+/* 📌 RESPONSIVE DESIGN (HP) 📌 */
+/* ============================== */
+@media (max-width: 1024px) {
+    .category-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 3 kolom di tablet */
+    }
+}
+
+@media (max-width: 768px) {
+    .category-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 kolom di HP */
+        gap: 10px;
+    }
+
+    .category {
+        padding: 10px;
+    }
+
+    .category h3 {
+        font-size: 1.1rem;
+    }
+
+    .category p {
+        font-size: 0.85rem;
+    }
+
+    .category .btn {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+}
+
+/* ============================== */
+/* 📌 MODE HP (LIST SATU PERSATU) 📌 */
+/* ============================== */
+@media (max-width: 480px) {
+    .category-grid {
+        grid-template-columns: 1fr; /* 1 kolom agar list satu per satu */
+    }
+
+    .category {
+        display: flex;
+        justify-content: space-between; /* Judul di kiri, tombol di kanan */
+        align-items: center;
+        padding: 10px 15px;
+    }
+
+    .category h3 {
+        font-size: 1rem;
+        text-align: left; /* Judul rata kiri */
+        flex: 1; /* Agar menyesuaikan lebar */
+    }
+
+    .category p {
+        display: none; /* Sembunyikan deskripsi di HP */
+    }
+
+    .category .btn {
+        font-size: 0.75rem;
+        padding: 5px 10px;
+        white-space: nowrap; /* Agar tombol tidak pecah ke bawah */
+    }
+}
+
+
+/* Social Footer */
+.social-footer {
+    background: #2c3e50;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+/* Spacer untuk menghindari navbar menutupi footer */
+.footer-spacer {
+    height: 60px; /* Sama dengan tinggi navbar */
+}
+
+.social-icons {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons li a img {
+    width: 30px;
+    height: 30px;
+    color: #16a085;
+    transition: transform 0.3s ease;
+    filter: brightness(0) saturate(100%) invert(39%) sepia(55%) saturate(397%) hue-rotate(129deg) brightness(92%) contrast(90%);
+}
+
+.social-icons li a img:hover {
+    transform: scale(1.2);
+    filter: brightness(0) saturate(100%) invert(82%) sepia(5%) saturate(7500%) hue-rotate(145deg) brightness(110%) contrast(100%);
+}
+
+/* Dynamic Text Animation */
+.dynamic-text {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.dynamic-text::after {
+    content: "|";
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+#subtitle {
+    font-size: 1.2rem;
+    color: #1abc9c;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 1.8rem; /* Lebih kecil agar tidak makan tempat */
+    }
+
+    .header p {
+        font-size: 0.9rem; /* Ukuran teks lebih kecil di HP */
+    }
+
+    .project {
+        flex-direction: column;
+    }
+
+    .project img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+/* About Me Section */
+.about {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 150px;
+    border: 3px solid #1abc9c;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #1abc9c;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+
+
+/* Table Style */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+table a {
+    text-decoration: none;
+    color: #00fff6;
+}
+
+th, td {
+    border: 1px solid #444;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background: #1abc9c;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    /* About me Style */
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .about-text h2 {
+        font-size: 1.6rem;
+    }
+
+    .about-text p {
+        font-size: 0.75rem;
+    }
+
+    table {
+        font-size: 0.75rem;
+    }
+
+    .personal-data h2 {
+        font-size: 1.5rem;
+    }
+    
+    .education h2{
+        font-size: 1.5rem;
+        padding-top: 10px;
+    }
+}
+
+.sub-navbar-normal {
+    background: #2c3e50;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.sub-navbar-normal .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.sub-navbar-normal ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+    max-width: 800px;
+}
+
+.sub-navbar-normal ul li {
+    display: inline;
+}
+
+.sub-navbar-normal ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.sub-navbar-normal ul li a:hover,
+.sub-navbar-normal ul li a.active {
+    
+    color: #1abc9c;
+}
+
+/* ============================== */
+/* 📌 MENU KATEGORI AKTIF 📌 */
+/* ============================== */
+.sub-navbar-normal ul li a.active {
+    
+    color: #16a085;
+    border-radius: 5px;
+    padding: 8px 12px;
+}
+
+/* ============================== */
+/* 📌 NAVBAR PORTFOLIO (LAPTOP) 📌 */
+/* ============================== */
+.btn-porto{
+    display: none;
+}
+.sub-navbar {
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000; /* Pastikan navbar ada di atas konten lain */
+    transition: transform 0.3s ease-in-out;
+    display: none;
+}
+
+.sub-navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+}
+
+.sub-navbar ul li {
+    display: inline;
+}
+
+.sub-navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.sub-navbar ul li a:hover {
+    color: #1abc9c;
+}
+
+/* ============================== */
+/* 📌 MODE HP - MENU MUNCUL KE ATAS 📌 */
+/* ============================== */
+@media (max-width: 768px) {
+    .btn-porto{
+        text-align: center;
+        background: #1abc9c;
+        color: #fff;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background 0.3s ease;
+        display: unset;
+    }
+    
+    .btn-porto:active{
+        background-color: #16a085;
+    }
+    .sub-navbar-normal {
+        display: none;
+    }
+    .sub-navbar {
+        text-align: left;
+        padding: 5px 15px;
+        display: unset;
+    }
+
+    /* Tombol Toggle */
+    .subnav-toggle {
+        background: #1abc9c;
+        color: #fff;
+        padding: 8px 15px;
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+
+    .subnav-toggle:hover {
+        background: #16a085;
+    }
+
+    /* Sembunyikan menu awalnya */
+    .sub-navbar ul {
+        display: none;
+        flex-direction: column;
+        background: #16a085;
+        padding: 10px;
+        margin: 0;
+        border-radius: 5px;
+        position: absolute;
+        bottom: 100%; /* Agar muncul ke atas */
+        left: 0;
+        width: 100%;
+        transform: translateY(-10px);
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        opacity: 0;
+        z-index: 10;
+    }
+
+    /* Saat aktif, tampilkan menu ke atas */
+    .sub-navbar ul.active {
+        display: flex;
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .sub-navbar ul li {
+        display: block;
+        text-align: left;
+        padding: 8px 0;
+    }
+
+    .sub-navbar ul li a {
+        display: block;
+        width: 100%;
+    }
+}
+
+
+/* Jika footer terlihat, navbar akan hilang */
+.sub-navbar.hidden {
+    transform: translateY(100%);
+}
+
+/* ============================== */
+/* 📌 CONTACT PAGE - QR CODE 📌 */
+/* ============================== */
+.contact-container {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.contact-container h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #1abc9c;
+}
+
+.contact-container p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.qr-code {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.qr-code img {
+    margin: 30px;
+    width: 360px; /* Lebih besar dari sebelumnya */
+    height: auto;
+    border: 3px solid #1abc9c;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    filter: brightness(0) saturate(100%) invert(39%) sepia(55%) saturate(397%) hue-rotate(129deg) brightness(92%) contrast(90%);
+    transform: scale(1.2); /* Selalu dalam keadaan diperbesar */
+}
+
+/* Efek hover tetap ada jika ingin tambahan */
+.qr-code img:hover {
+    transform: scale(1.3); /* Lebih besar saat di-hover */
+    filter: brightness(0) saturate(100%) invert(82%) sepia(5%) saturate(7500%) hue-rotate(145deg) brightness(110%) contrast(100%);
+}
+
+/* Responsif di HP agar tidak terlalu besar */
+@media (max-width: 768px) {
+    .qr-code img {
+        width: 250px;
+        transform: scale(1); /* Tidak diperbesar di HP */
+    }
+}
+
+/* Container utama */
+.detail-project-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.detail-project-card {
+    width: 90%;
+    max-width: 800px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Header */
+.detail-project-header h2 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Metadata */
+.detail-project-meta {
+    text-align: center;
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 15px;
+}
+
+/* Cover Image */
+.detail-project-cover {
+    width: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+/* Deskripsi */
+.detail-project-description {
+    font-weight: 500;
+    font-size: 16px;
+    text-align: justify;
+    padding: 0 15px;
+}
+
+/* Konten dengan indentasi di awal paragraf */
+.detail-project-content {
+    padding: 15px;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+
+/* Gallery Swiper */
+.detail-project-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.detail-project-slider {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.swiper-slide {
+    text-align: center;
+    transition: transform 0.4s;
+}
+
+.swiper-slide img {
+    width: 100%;
+    max-width: 120px;
+    transition: transform 0.4s ease-in-out;
+}
+
+.swiper-slide-active img {
+    transform: scale(1.5);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .detail-project-card {
+        width: 95%;
+    }
+}
+
+/* Container utama */
+.detail-project-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.detail-project-card {
+    width: 90%;
+    max-width: 800px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Header */
+.detail-project-header h2 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Metadata */
+.detail-project-meta {
+    text-align: center;
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 15px;
+}
+
+/* Cover Image */
+.detail-project-cover {
+    width: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+/* Deskripsi */
+.detail-project-description {
+    font-weight: 500;
+    font-size: 16px;
+    text-align: justify;
+    padding: 0 15px;
+}
+
+/* Konten */
+.detail-project-content {
+    padding: 15px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Semua gambar kecil dan berjejer */
+.detail-project-images {
+    display: flex; /* Menjadikan gambar dalam satu baris */
+    justify-content: center; /* Rata tengah */
+    align-items: center;
+    flex-wrap: wrap; /* Jika tidak cukup, pindah ke baris berikutnya */
+    gap: 10px; /* Jarak antar gambar */
+    padding: 20px 0;
+    width: 100%;
+}
+
+/* Atur ukuran gambar agar kecil */
+.detail-project-images img {
+    max-width: 160px; /* Ukuran gambar lebih kecil */
+    height: auto;
+    display: block;
+    border-radius: 5px; /* Opsional: Membuat sudut membulat */
+}
+
+
+.detail-project-slider {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.swiper-slide {
+    text-align: center;
+    transition: transform 0.4s;
+}
+
+.swiper-slide img {
+    width: 100%;
+    max-width: 120px;
+    transition: transform 0.4s ease-in-out;
+}
+
+.swiper-slide-active img {
+    transform: scale(1.5);
+}
+
+
+
+.swiper-container detail-project-top-images {
+    align-items: center;
+    justify-content: center;   
+}
+/* Styling untuk tombol next & prev */
+.swiper-button-prev, 
+.swiper-button-next {
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.swiper-button-prev:hover, 
+.swiper-button-next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Supaya tombol tidak menutupi gambar */
+.swiper-container {
+    position: relative;
+}
+
+.swiper-button-prev {
+    left: -10px;
+}
+
+.swiper-button-next {
+    right: -10px;
+}
+.white-background {
+    background-color: rgb(0, 0, 0) !important;
+}
+
+.photo-home {
+    height: 250px;
+    width: auto;
+    background-color: none; /* Membuat background transparan */
+    padding: 10px 10px;
+}
+@media (max-width: 768px) {
+    .photo-home {
+        height: 200px;
+        width: auto;
+        background-color: none; /* Membuat background transparan */
+      	padding: 0px 0px;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    /* Cover Image */
+    .detail-project-cover {
+        width: auto;
+        max-height: 200px;
+    }
+
+    /* Konten */
+    .detail-project-content {
+        padding: 15px;
+        font-size: 0.80rem;
+        line-height: 1.6;
+    }
+
+    .detail-project-images img {
+        max-width: 80px; /* Ukuran gambar lebih kecil */
+        height: auto;
+        display: block;
+        border-radius: 5px; /* Opsional: Membuat sudut membulat */
+    }
+
+    .detail-project-top-images {
+        width: 230px;
+    }
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Maksimal 6 gambar per baris */
+    gap: 10px;
+    max-width: 900px; /* Atur lebar maksimal galeri */
+    margin: auto;
+}
+
+.gallery-item {
+    position: relative;
+    max-width: 150px; /* Maksimal ukuran gambar */
+}
+
+.gallery img {
+    width: 100%;
+    height: 150px; /* Atur tinggi gambar agar seragam */
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+.gallery p {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 5px;
+}
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+}
