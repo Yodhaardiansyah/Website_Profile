@@ -1,3 +1,7 @@
+Project by Yodha Ardiansyah
+Instagram: @yodhaar_
+
+
 /project-root
 │── /public                             # Folder untuk file yang bisa diakses langsung oleh browser
 │   ├── /css                            # File stylesheet (misalnya: styles.css)
