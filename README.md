@@ -1,6 +1,6 @@
 Project by Yodha Ardiansyah
 Instagram: @yodhaar_
-
+Web Preview: yodha.arunovasi.my.id
 
 /project-root
 │── /public                             # Folder untuk file yang bisa diakses langsung oleh browser
